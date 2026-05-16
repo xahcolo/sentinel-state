@@ -1,0 +1,12 @@
+{
+  "node_name": "Tess",
+  "hostname": "srv1350095",
+  "capabilities": [
+    "sentinel-supervisor",
+    "web_search",
+    "autonomous_l5"
+  ],
+  "free_tier_providers": null,
+  "last_seen_at": "2026-05-16T01:30:22.486901245Z",
+  "external_primary_priority": 10
+}
