@@ -1,0 +1,67 @@
+{
+  "cycle_id": "20260528T224921Z-c562",
+  "node_name": "Tess",
+  "generated_at": "2026-05-28T22:49:21.712357146Z",
+  "ranked_queue": {
+    "cycle_id": "20260528T224921Z-c562",
+    "generated_at": "2026-05-28T22:49:21.712357146Z",
+    "node_name": "vps-standalone",
+    "items": [
+      {
+        "rank": 1,
+        "pipeline": "build",
+        "action_class": "refactor_spike",
+        "target": "operations/archive",
+        "rationale": "source=architect; recurrence~log(645)*0.8\n\n[RCI refinement, session=rci-18b3dc5c967657aa, score=0.76]\nSelected concept: PostgreSQL + Next.js + REST+Chi (score 0.76)",
+        "confidence": 1,
+        "risk_class": "wide",
+        "estimated_scope_loc": 50,
+        "time_budget_sec": 300
+      },
+      {
+        "rank": 2,
+        "pipeline": "build",
+        "action_class": "refactor_spike",
+        "target": "internal/sydney",
+        "rationale": "source=architect; recurrence~log(226)*0.8\n\n[RCI refinement, session=rci-18b3dc5c99c6017b, score=0.76]\nSelected concept: PostgreSQL + Next.js + REST+Chi (score 0.76)",
+        "confidence": 1,
+        "risk_class": "wide",
+        "estimated_scope_loc": 50,
+        "time_budget_sec": 300
+      },
+      {
+        "rank": 3,
+        "pipeline": "ops",
+        "action_class": "apply_known_fix",
+        "target": "PLAN-sydney-car.md:70",
+        "rationale": "source=gardener; severity=0.30*1.0; recurrence~log(589)*0.8\n\n[RCI refinement, session=rci-18b3dc5c9d23dcec, score=0.76]\nSelected concept: PostgreSQL + Next.js + REST+Chi (score 0.76)",
+        "confidence": 1,
+        "risk_class": "contained",
+        "estimated_scope_loc": 20,
+        "time_budget_sec": 120
+      },
+      {
+        "rank": 4,
+        "pipeline": "ops",
+        "action_class": "apply_known_fix",
+        "target": "orchestra/iteration/usage.go:62",
+        "rationale": "source=gardener; severity=0.60*1.0; recurrence~log(1113)*0.8",
+        "confidence": 1,
+        "risk_class": "contained",
+        "estimated_scope_loc": 20,
+        "time_budget_sec": 120
+      },
+      {
+        "rank": 5,
+        "pipeline": "ops",
+        "action_class": "apply_known_fix",
+        "target": "orchestra/sidekick.go:1",
+        "rationale": "source=gardener; severity=1.00*1.0; recurrence~log(174)*0.8",
+        "confidence": 1,
+        "risk_class": "contained",
+        "estimated_scope_loc": 20,
+        "time_budget_sec": 120
+      }
+    ]
+  }
+}
