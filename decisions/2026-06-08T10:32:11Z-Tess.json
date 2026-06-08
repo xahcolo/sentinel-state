@@ -1,0 +1,67 @@
+{
+  "cycle_id": "20260608T103211Z-2604",
+  "node_name": "Tess",
+  "generated_at": "2026-06-08T10:32:11.551935954Z",
+  "ranked_queue": {
+    "cycle_id": "20260608T103211Z-2604",
+    "generated_at": "2026-06-08T10:32:11.551935954Z",
+    "node_name": "vps-standalone",
+    "items": [
+      {
+        "rank": 1,
+        "pipeline": "ops",
+        "action_class": "apply_known_fix",
+        "target": "PLAN-sydney-car.md:70",
+        "rationale": "source=gardener; severity=0.30*1.0; recurrence~log(589)*0.8\n\n[RCI refinement, session=rci-18b71485a90dff1b, score=0.76]\nSelected concept: PostgreSQL + Next.js + REST+Chi (score 0.76)",
+        "confidence": 1,
+        "risk_class": "contained",
+        "estimated_scope_loc": 20,
+        "time_budget_sec": 120
+      },
+      {
+        "rank": 2,
+        "pipeline": "ops",
+        "action_class": "apply_known_fix",
+        "target": "orchestra/iteration/usage.go:62",
+        "rationale": "source=gardener; severity=0.60*1.0; recurrence~log(1113)*0.8\n\n[RCI refinement, session=rci-18b71488bbf2ec69, score=0.76]\nSelected concept: PostgreSQL + Next.js + REST+Chi (score 0.76)",
+        "confidence": 1,
+        "risk_class": "contained",
+        "estimated_scope_loc": 20,
+        "time_budget_sec": 120
+      },
+      {
+        "rank": 3,
+        "pipeline": "ops",
+        "action_class": "apply_known_fix",
+        "target": "orchestra/sidekick.go:1",
+        "rationale": "source=gardener; severity=1.00*1.0; recurrence~log(174)*0.8\n\n[RCI refinement, session=rci-18b7148a4c001d06, score=0.76]\nSelected concept: PostgreSQL + Next.js + REST+Chi (score 0.76)",
+        "confidence": 1,
+        "risk_class": "contained",
+        "estimated_scope_loc": 20,
+        "time_budget_sec": 120
+      },
+      {
+        "rank": 4,
+        "pipeline": "build",
+        "action_class": "refactor_spike",
+        "target": "operations/archive",
+        "rationale": "source=architect; recurrence~log(645)*0.8",
+        "confidence": 1,
+        "risk_class": "wide",
+        "estimated_scope_loc": 50,
+        "time_budget_sec": 300
+      },
+      {
+        "rank": 5,
+        "pipeline": "build",
+        "action_class": "refactor_spike",
+        "target": "internal/sydney",
+        "rationale": "source=architect; recurrence~log(226)*0.8",
+        "confidence": 1,
+        "risk_class": "wide",
+        "estimated_scope_loc": 50,
+        "time_budget_sec": 300
+      }
+    ]
+  }
+}
