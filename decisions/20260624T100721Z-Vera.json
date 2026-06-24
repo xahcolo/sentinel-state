@@ -1,0 +1,52 @@
+{
+  "cycle_id": "20260624T100721Z-Vera",
+  "generated_at": "2026-06-24T10:07:21Z",
+  "node_name": "Vera",
+  "items": [
+    {
+      "rank": 1,
+      "pipeline": "ops",
+      "action_class": "escalate_stuck_loop",
+      "target": "cycles: 20260614T181938Z-ca8f, 20260614T162639Z-c2a0, 20260614T135107Z-d76e",
+      "rationale": "Tess has been silent for 10 days (last cycle 2026-06-14T18:19:38Z, today 2026-06-24); external-lease/who.json expired 2026-05-25 and has not been renewed; the S-10 kaizen-self-audit stagnation threshold (>2 weeks) is imminent -- Tess daemon may have stopped or cycles are not reaching sentinel-state.",
+      "confidence": 0.92,
+      "risk_class": "critical"
+    },
+    {
+      "rank": 2,
+      "pipeline": "build",
+      "action_class": "apply_known_fix",
+      "target": "internal/selfprd/pattern_combine.go",
+      "rationale": "S-02 (meta-complaint factory) status=ready since 2026-05-05: canonical-title hash dedup gate has not been activated; Tess loop has never touched this file across 8+ visible cycles, leaving queue-pollution fix unexecuted.",
+      "confidence": 0.85,
+      "risk_class": "local"
+    },
+    {
+      "rank": 3,
+      "pipeline": "research",
+      "action_class": "crawl_topic",
+      "target": "internal/bandit + internal/bayesopt + internal/supervisor/canary_wire_all.go",
+      "rationale": "S-05 (algorithm spine revival): packages internal/bandit and internal/bayesopt exist on disk; wiring status in canary_wire_all.go is unknown; per S-05 each revived algorithm must have a WIRED: reference in supervisor_init.go AND produce a per-cycle artifact.",
+      "confidence": 0.80,
+      "risk_class": "contained"
+    },
+    {
+      "rank": 4,
+      "pipeline": "build",
+      "action_class": "propose_feature",
+      "target": "internal/mcp",
+      "rationale": "S-07 (MCP distribution): internal/mcp package exists; exposing Sidekick read-only tools as MCP endpoints is the cheapest GTM lever per the Manus AI recommendation and has never appeared in Tess decision queue.",
+      "confidence": 0.75,
+      "risk_class": "local"
+    },
+    {
+      "rank": 5,
+      "pipeline": "research",
+      "action_class": "file_briefing",
+      "target": "data/sydney/active-plan-status.md",
+      "rationale": "S-10 (kaizen loop own kaizen): weekly kaizen-self-audit artifact overdue; last visible cycle was 2026-06-14; S-10 contract fires Signal alert on stagnation >2 weeks -- threshold breach is 2026-06-28.",
+      "confidence": 0.88,
+      "risk_class": "contained"
+    }
+  ]
+}
